@@ -1,0 +1,376 @@
+[gd_scene load_steps=39 format=2]
+
+[ext_resource path="res://Screens/MainGameScreen/Scripts/Racetrack.gd" type="Script" id=1]
+[ext_resource path="res://Screens/MainGameScreen/Textures/racers/david.tres" type="SpriteFrames" id=2]
+[ext_resource path="res://Screens/MainGameScreen/Scripts/Batter.gd" type="Script" id=3]
+[ext_resource path="res://Screens/MainGameScreen/Textures/racers/julian.tres" type="SpriteFrames" id=4]
+[ext_resource path="res://Screens/MainGameScreen/Scripts/Pitcher.gd" type="Script" id=5]
+[ext_resource path="res://Screens/MainGameScreen/Scripts/MainGameScreenDebug.gd" type="Script" id=6]
+[ext_resource path="res://Screens/MainGameScreen/Textures/UI_SET_INDICATOR.png" type="Texture" id=7]
+[ext_resource path="res://Screens/MainGameScreen/Textures/UI_BASE_FULL_INDICATOR.png" type="Texture" id=8]
+[ext_resource path="res://Screens/MainGameScreen/Textures/UI_SMALL_QUESTION.png" type="Texture" id=9]
+[ext_resource path="res://Screens/MainGameScreen/Textures/UI_SMALL_DOUBLEPOINT.png" type="Texture" id=10]
+[ext_resource path="res://Screens/MainGameScreen/Textures/DISTANCE_IDENTIFIER.png" type="Texture" id=11]
+[ext_resource path="res://Screens/MainGameScreen/Scripts/Timer.gd" type="Script" id=12]
+[ext_resource path="res://Screens/MainGameScreen/Prefabs/Base.tscn" type="PackedScene" id=13]
+[ext_resource path="res://Screens/MainGameScreen/Scripts/Bases.gd" type="Script" id=14]
+[ext_resource path="res://Screens/MainGameScreen/Textures/UI_BG.png" type="Texture" id=15]
+[ext_resource path="res://Screens/MainGameScreen/Prefabs/SmallDigit.tscn" type="PackedScene" id=16]
+[ext_resource path="res://Screens/MainGameScreen/Scripts/BattingUI.gd" type="Script" id=17]
+[ext_resource path="res://Screens/PrologueScreen/Prefabs/FadeOut.tscn" type="PackedScene" id=18]
+[ext_resource path="res://Screens/MainGameScreen/Scripts/RaceEnemies.gd" type="Script" id=19]
+[ext_resource path="res://Screens/MainGameScreen/Textures/inning/1.png" type="Texture" id=20]
+[ext_resource path="res://Screens/MainGameScreen/Textures/batting/david.png" type="Texture" id=21]
+[ext_resource path="res://Screens/MainGameScreen/Textures/pitching/julian.png" type="Texture" id=22]
+[ext_resource path="res://Screens/MainGameScreen/Scripts/StartUI.gd" type="Script" id=23]
+[ext_resource path="res://Screens/MainGameScreen/Scripts/OverUI.gd" type="Script" id=24]
+[ext_resource path="res://Screens/MainGameScreen/Textures/BASE4.png" type="Texture" id=25]
+[ext_resource path="res://Screens/MainGameScreen/Textures/DESTROYED.png" type="Texture" id=26]
+[ext_resource path="res://Screens/MainGameScreen/Textures/GAMEOVER.png" type="Texture" id=27]
+[ext_resource path="res://Screens/MainGameScreen/Textures/LOSE.png" type="Texture" id=28]
+[ext_resource path="res://Screens/MainGameScreen/Scripts/GameOverUI.gd" type="Script" id=29]
+[ext_resource path="res://Screens/MainGameScreen/Scripts/BG.gd" type="Script" id=30]
+[ext_resource path="res://Screens/MainGameScreen/Textures/pitchcountnumbers/8.png" type="Texture" id=31]
+[ext_resource path="res://Screens/MainGameScreen/Textures/th/rd.png" type="Texture" id=32]
+[ext_resource path="res://Screens/MainGameScreen/Textures/PITCH.png" type="Texture" id=33]
+[ext_resource path="res://Screens/MainGameScreen/Scripts/PitchCount.gd" type="Script" id=34]
+[ext_resource path="res://Screens/MainGameScreen/Textures/UI_HEALTH_FG.png" type="Texture" id=35]
+[ext_resource path="res://Screens/MainGameScreen/Textures/TARGET_ARROW.png" type="Texture" id=36]
+[ext_resource path="res://Screens/MainGameScreen/Textures/target_rectangle.tres" type="SpriteFrames" id=37]
+
+[sub_resource type="ShaderMaterial" id=1]
+
+[node name="MainGameScreen" type="Node2D"]
+
+[node name="Camera2D" type="Camera2D" parent="."]
+current = true
+
+[node name="BG" type="Sprite" parent="."]
+material = SubResource( 1 )
+scale = Vector2( 2, 2 )
+z_index = -4000
+script = ExtResource( 30 )
+
+[node name="Racetrack" type="Node2D" parent="."]
+z_index = -4000
+script = ExtResource( 1 )
+
+[node name="Bases" type="Node2D" parent="."]
+visible = false
+script = ExtResource( 14 )
+
+[node name="Base" parent="Bases" instance=ExtResource( 13 )]
+
+[node name="Base2" parent="Bases" instance=ExtResource( 13 )]
+
+[node name="Base3" parent="Bases" instance=ExtResource( 13 )]
+
+[node name="Base4" parent="Bases" instance=ExtResource( 13 )]
+
+[node name="Pitcher" type="Node2D" parent="."]
+position = Vector2( 15, -36.05 )
+script = ExtResource( 5 )
+
+[node name="Sprite" type="AnimatedSprite" parent="Pitcher"]
+frames = ExtResource( 4 )
+animation = "pitching_idle"
+offset = Vector2( 0, -16 )
+
+[node name="ThrowStartPoint" type="Node2D" parent="Pitcher"]
+position = Vector2( 15, -24 )
+
+[node name="TargetRectangle" type="Node2D" parent="."]
+visible = false
+
+[node name="Rectangle" type="AnimatedSprite" parent="TargetRectangle"]
+frames = ExtResource( 37 )
+frame = 3
+playing = true
+
+[node name="Arrow" type="Sprite" parent="TargetRectangle"]
+texture = ExtResource( 36 )
+centered = false
+offset = Vector2( -16, 0 )
+
+[node name="Batter" type="Node2D" parent="."]
+position = Vector2( 0, 116 )
+script = ExtResource( 3 )
+
+[node name="Sprite" type="AnimatedSprite" parent="Batter"]
+frames = ExtResource( 2 )
+animation = "batting_default"
+offset = Vector2( -4, -76 )
+
+[node name="HitCore" type="Node2D" parent="Batter"]
+position = Vector2( 84, -58 )
+
+[node name="HitLeft" type="Node2D" parent="Batter"]
+position = Vector2( 38, -60 )
+
+[node name="HitRight" type="Node2D" parent="Batter"]
+position = Vector2( 122, -56 )
+
+[node name="RaceEnemies" type="Node2D" parent="."]
+script = ExtResource( 19 )
+
+[node name="UI" type="Node2D" parent="."]
+
+[node name="Batting" type="Node2D" parent="UI"]
+script = ExtResource( 17 )
+
+[node name="BG" type="Sprite" parent="UI/Batting"]
+position = Vector2( 0.5, -98 )
+texture = ExtResource( 15 )
+
+[node name="StrikeImages" type="Node2D" parent="UI/Batting"]
+
+[node name="Strike1" type="Sprite" parent="UI/Batting/StrikeImages"]
+visible = false
+position = Vector2( 33.5, -97.5 )
+texture = ExtResource( 7 )
+
+[node name="Strike2" type="Sprite" parent="UI/Batting/StrikeImages"]
+visible = false
+position = Vector2( 41.5, -97.5 )
+texture = ExtResource( 7 )
+
+[node name="Strike3" type="Sprite" parent="UI/Batting/StrikeImages"]
+visible = false
+position = Vector2( 49.5, -97.5 )
+texture = ExtResource( 7 )
+
+[node name="OutImages" type="Node2D" parent="UI/Batting"]
+
+[node name="Out1" type="Sprite" parent="UI/Batting/OutImages"]
+visible = false
+position = Vector2( 33.5, -87.5 )
+texture = ExtResource( 7 )
+
+[node name="Out2" type="Sprite" parent="UI/Batting/OutImages"]
+visible = false
+position = Vector2( 41.5, -87.5 )
+texture = ExtResource( 7 )
+
+[node name="Out3" type="Sprite" parent="UI/Batting/OutImages"]
+visible = false
+position = Vector2( 49.5, -87.5 )
+texture = ExtResource( 7 )
+
+[node name="BallImages" type="Node2D" parent="UI/Batting"]
+
+[node name="Ball1" type="Sprite" parent="UI/Batting/BallImages"]
+visible = false
+position = Vector2( 33.5, -107.5 )
+texture = ExtResource( 7 )
+
+[node name="Ball2" type="Sprite" parent="UI/Batting/BallImages"]
+visible = false
+position = Vector2( 41.5, -107.5 )
+texture = ExtResource( 7 )
+
+[node name="Ball3" type="Sprite" parent="UI/Batting/BallImages"]
+visible = false
+position = Vector2( 49.5, -107.5 )
+texture = ExtResource( 7 )
+
+[node name="Ball4" type="Sprite" parent="UI/Batting/BallImages"]
+visible = false
+position = Vector2( 57.5, -107.5 )
+texture = ExtResource( 7 )
+
+[node name="BaseImages" type="Node2D" parent="UI/Batting"]
+
+[node name="Base1" type="Sprite" parent="UI/Batting/BaseImages"]
+visible = false
+position = Vector2( 94.5, -93.5 )
+texture = ExtResource( 8 )
+
+[node name="Base2" type="Sprite" parent="UI/Batting/BaseImages"]
+visible = false
+position = Vector2( 85.5, -101.5 )
+texture = ExtResource( 8 )
+
+[node name="Base3" type="Sprite" parent="UI/Batting/BaseImages"]
+visible = false
+position = Vector2( 76.5, -93.5 )
+texture = ExtResource( 8 )
+
+[node name="Numbers" type="Node2D" parent="UI/Batting"]
+
+[node name="General" type="Node2D" parent="UI/Batting/Numbers"]
+
+[node name="Drives1" parent="UI/Batting/Numbers/General" instance=ExtResource( 16 )]
+
+[node name="Drives2" parent="UI/Batting/Numbers/General" instance=ExtResource( 16 )]
+position = Vector2( -20.5, -88 )
+
+[node name="Hits1" parent="UI/Batting/Numbers/General" instance=ExtResource( 16 )]
+position = Vector2( -8.5, -98 )
+
+[node name="Hits2" parent="UI/Batting/Numbers/General" instance=ExtResource( 16 )]
+position = Vector2( -8.5, -88 )
+
+[node name="Errors1" parent="UI/Batting/Numbers/General" instance=ExtResource( 16 )]
+position = Vector2( 3.5, -98 )
+
+[node name="Errors2" parent="UI/Batting/Numbers/General" instance=ExtResource( 16 )]
+position = Vector2( 3.5, -88 )
+
+[node name="Innings1" type="Node2D" parent="UI/Batting/Numbers"]
+
+[node name="1" parent="UI/Batting/Numbers/Innings1" instance=ExtResource( 16 )]
+visible = false
+position = Vector2( -115.5, -100 )
+
+[node name="2" parent="UI/Batting/Numbers/Innings1" instance=ExtResource( 16 )]
+visible = false
+position = Vector2( -105.5, -100 )
+
+[node name="3" parent="UI/Batting/Numbers/Innings1" instance=ExtResource( 16 )]
+visible = false
+position = Vector2( -95.5, -100 )
+
+[node name="Innings2" type="Node2D" parent="UI/Batting/Numbers"]
+
+[node name="1" parent="UI/Batting/Numbers/Innings2" instance=ExtResource( 16 )]
+visible = false
+position = Vector2( -115.5, -88 )
+
+[node name="2" parent="UI/Batting/Numbers/Innings2" instance=ExtResource( 16 )]
+visible = false
+position = Vector2( -105.5, -88 )
+
+[node name="3" parent="UI/Batting/Numbers/Innings2" instance=ExtResource( 16 )]
+visible = false
+position = Vector2( -95.5, -88 )
+
+[node name="Timer" type="Node2D" parent="UI/Batting"]
+position = Vector2( -155, -115 )
+script = ExtResource( 12 )
+
+[node name="1" type="Sprite" parent="UI/Batting/Timer"]
+position = Vector2( 259, 2 )
+texture = ExtResource( 9 )
+centered = false
+
+[node name="2" type="Sprite" parent="UI/Batting/Timer"]
+position = Vector2( 267, 2 )
+texture = ExtResource( 9 )
+centered = false
+
+[node name="Separator" type="Sprite" parent="UI/Batting/Timer"]
+position = Vector2( 274, 2 )
+texture = ExtResource( 10 )
+centered = false
+
+[node name="3" type="Sprite" parent="UI/Batting/Timer"]
+position = Vector2( 280, 2 )
+texture = ExtResource( 9 )
+centered = false
+
+[node name="4" type="Sprite" parent="UI/Batting/Timer"]
+position = Vector2( 288, 2 )
+texture = ExtResource( 9 )
+centered = false
+
+[node name="DistanceImages" type="Node2D" parent="UI/Batting"]
+
+[node name="1" type="Sprite" parent="UI/Batting/DistanceImages"]
+position = Vector2( 108, -101.5 )
+scale = Vector2( 1e-05, 1 )
+texture = ExtResource( 11 )
+
+[node name="2" type="Sprite" parent="UI/Batting/DistanceImages"]
+position = Vector2( 108, -96.5 )
+scale = Vector2( 1e-05, 1 )
+texture = ExtResource( 11 )
+
+[node name="3" type="Sprite" parent="UI/Batting/DistanceImages"]
+position = Vector2( 108, -91.5 )
+scale = Vector2( 1e-05, 1 )
+texture = ExtResource( 11 )
+
+[node name="4" type="Sprite" parent="UI/Batting/DistanceImages"]
+position = Vector2( 108, -86.5 )
+scale = Vector2( 1e-05, 1 )
+texture = ExtResource( 11 )
+
+[node name="HealthIndicator" type="Sprite" parent="UI/Batting"]
+position = Vector2( -52, -84 )
+texture = ExtResource( 35 )
+centered = false
+offset = Vector2( -11, -20 )
+region_enabled = true
+region_rect = Rect2( 0, 0, 22, 20 )
+
+[node name="Racing" type="Node2D" parent="UI"]
+visible = false
+
+[node name="StartUI" type="Node2D" parent="UI"]
+visible = false
+script = ExtResource( 23 )
+
+[node name="Inning" type="Sprite" parent="UI/StartUI"]
+position = Vector2( 0, -60 )
+texture = ExtResource( 20 )
+
+[node name="Batter" type="Sprite" parent="UI/StartUI"]
+texture = ExtResource( 21 )
+
+[node name="Pitcher" type="Sprite" parent="UI/StartUI"]
+position = Vector2( 0, 30 )
+texture = ExtResource( 22 )
+
+[node name="PitchCount" type="Node2D" parent="UI/StartUI"]
+position = Vector2( 0, -30 )
+script = ExtResource( 34 )
+
+[node name="thSprite" type="Sprite" parent="UI/StartUI/PitchCount"]
+position = Vector2( -30, 0 )
+texture = ExtResource( 32 )
+
+[node name="Pitch" type="Sprite" parent="UI/StartUI/PitchCount"]
+texture = ExtResource( 33 )
+
+[node name="Counter" type="Node2D" parent="UI/StartUI/PitchCount"]
+
+[node name="1" type="Sprite" parent="UI/StartUI/PitchCount/Counter"]
+position = Vector2( -60, 0 )
+texture = ExtResource( 31 )
+
+[node name="2" type="Sprite" parent="UI/StartUI/PitchCount/Counter"]
+visible = false
+position = Vector2( -79, 0 )
+texture = ExtResource( 31 )
+
+[node name="3" type="Sprite" parent="UI/StartUI/PitchCount/Counter"]
+visible = false
+position = Vector2( -98, 0 )
+texture = ExtResource( 31 )
+
+[node name="OverUI" type="Node2D" parent="UI"]
+visible = false
+script = ExtResource( 24 )
+
+[node name="Type" type="Sprite" parent="UI/OverUI"]
+position = Vector2( 0, -30 )
+texture = ExtResource( 26 )
+
+[node name="Where" type="Sprite" parent="UI/OverUI"]
+texture = ExtResource( 25 )
+
+[node name="GameOverUI" type="Node2D" parent="UI"]
+visible = false
+script = ExtResource( 29 )
+
+[node name="Type" type="Sprite" parent="UI/GameOverUI"]
+position = Vector2( 0, -30 )
+texture = ExtResource( 28 )
+
+[node name="GameOver" type="Sprite" parent="UI/GameOverUI"]
+texture = ExtResource( 27 )
+
+[node name="MainGameScreenDebug" type="Node2D" parent="."]
+script = ExtResource( 6 )
+
+[node name="FadeOut" parent="." instance=ExtResource( 18 )]

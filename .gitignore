@@ -7,3 +7,33 @@ export_presets.cfg
 # Mono-specific ignores
 .mono/
 data_*/
+
+#Bosoball ignores
+Export/
+
+Screens/MainGameScreen/Prefabs/
+Screens/MainGameScreen/Scripts/
+Screens/MainGameScreen/Shaders/
+Screens/MainGameScreen/Sounds/
+Screens/MainGameScreen/Textures/
+Screens/MainGameScreen/Cutscenes/
+
+Screens/PrologueScreen/Prefabs/
+Screens/PrologueScreen/Scripts/
+Screens/PrologueScreen/Shaders/
+Screens/PrologueScreen/Sounds/
+Screens/PrologueScreen/Textures/
+Screens/PrologueScreen/Cutscenes/
+
+Screens/StoryScreen/Prefabs/
+Screens/StoryScreen/Scripts/
+Screens/StoryScreen/Shaders/
+Screens/StoryScreen/Sounds/
+Screens/StoryScreen/Textures/
+Screens/StoryScreen/Cutscenes/
+
+Screens/TitleScreen/Prefabs/
+Screens/TitleScreen/Scripts/
+Screens/TitleScreen/Shaders/
+Screens/TitleScreen/Sounds/
+Screens/TitleScreen/Cutscenes/
