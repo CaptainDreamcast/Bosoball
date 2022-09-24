@@ -1,0 +1,19 @@
+[gd_resource type="SpriteFrames" load_steps=5 format=2]
+
+[ext_resource path="res://Screens/PrologueScreen/Textures/COWBOY/COW1.png" type="Texture" id=1]
+[ext_resource path="res://Screens/PrologueScreen/Textures/COWBOY/COW3.png" type="Texture" id=2]
+[ext_resource path="res://Screens/PrologueScreen/Textures/COWBOY/COW_HIT.png" type="Texture" id=3]
+[ext_resource path="res://Screens/PrologueScreen/Textures/COWBOY/COW2.png" type="Texture" id=4]
+
+[resource]
+animations = [ {
+"frames": [ ExtResource( 1 ), ExtResource( 4 ), ExtResource( 1 ), ExtResource( 2 ) ],
+"loop": true,
+"name": "default",
+"speed": 20.0
+}, {
+"frames": [ ExtResource( 3 ) ],
+"loop": true,
+"name": "get_hit",
+"speed": 5.0
+} ]
