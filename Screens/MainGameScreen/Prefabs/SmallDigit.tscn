@@ -1,0 +1,9 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Screens/MainGameScreen/Scripts/SmallDigit.gd" type="Script" id=1]
+[ext_resource path="res://Screens/MainGameScreen/Textures/UI_SMALL_0.png" type="Texture" id=2]
+
+[node name="Drives1" type="Sprite"]
+position = Vector2( -20.5, -98 )
+texture = ExtResource( 2 )
+script = ExtResource( 1 )

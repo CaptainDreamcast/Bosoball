@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/onlymp3.to - Motorcycle Engine Start, Idle-PbvmBE35aNQ-192k-1659404423942.mp3-eb2842d15e7e184ce12081e8a1574659.mp3str"
+
+[deps]
+
+source_file="res://Screens/MainGameScreen/Sounds/Concept/onlymp3.to - Motorcycle Engine Start, Idle-PbvmBE35aNQ-192k-1659404423942.mp3"
+dest_files=[ "res://.import/onlymp3.to - Motorcycle Engine Start, Idle-PbvmBE35aNQ-192k-1659404423942.mp3-eb2842d15e7e184ce12081e8a1574659.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

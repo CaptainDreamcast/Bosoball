@@ -1,0 +1,19 @@
+[gd_resource type="SpriteFrames" load_steps=5 format=2]
+
+[ext_resource path="res://Screens/PrologueScreen/Textures/ANCIENT/MAMMOTH2.png" type="Texture" id=1]
+[ext_resource path="res://Screens/PrologueScreen/Textures/ANCIENT/MAMMOTH1.png" type="Texture" id=2]
+[ext_resource path="res://Screens/PrologueScreen/Textures/ANCIENT/MAMMOTH3.png" type="Texture" id=3]
+[ext_resource path="res://Screens/PrologueScreen/Textures/ANCIENT/MAMMOTH_HIT.png" type="Texture" id=4]
+
+[resource]
+animations = [ {
+"frames": [ ExtResource( 2 ), ExtResource( 1 ), ExtResource( 2 ), ExtResource( 3 ) ],
+"loop": true,
+"name": "default",
+"speed": 20.0
+}, {
+"frames": [ ExtResource( 4 ) ],
+"loop": true,
+"name": "get_hit",
+"speed": 5.0
+} ]

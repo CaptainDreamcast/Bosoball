@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/revving_up.wav-cea039e6532d79e7be17caa6d102664f.sample"
+
+[deps]
+
+source_file="res://Screens/MainGameScreen/Sounds/revving_up.wav"
+dest_files=[ "res://.import/revving_up.wav-cea039e6532d79e7be17caa6d102664f.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

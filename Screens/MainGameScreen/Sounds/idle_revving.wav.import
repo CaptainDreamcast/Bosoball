@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/idle_revving.wav-db5d6d94dd95d6fc9fb889390269694c.sample"
+
+[deps]
+
+source_file="res://Screens/MainGameScreen/Sounds/idle_revving.wav"
+dest_files=[ "res://.import/idle_revving.wav-db5d6d94dd95d6fc9fb889390269694c.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0
