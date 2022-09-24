@@ -1,0 +1,28 @@
+	[BG STADIUM, Reporter center]
+	Reppy: THEY WON! THEY WON! ÜTZ WON AGAINST THE 4TH GENERATION HEAD MAKING THEM THE NEW TOP DELINQUENTS OF M CITY! THE READER MUST BE BREAKING OUT IN TEARS TOO, AFTER ALL THE BUILDUP!
+	Reppy: AS IS TRADITION, THEY WILL NOW LEAD "THE GREAT PROCESSION" DOWN MAIN STREET, WITH ALL OTHER DELINQUENTS FOLLOWING THEM BEHIND ON THEIR BIKES!
+	[Utz2 center]
+	Jo: It wasn't much, for a rocket scientist such as myself.
+	[delinquent_males center]
+	Randos: Please make us your rocket science underlings, 5th generation head!
+	[delinquent_females center]
+	Randis: Please let us have your rocket scientist children, 5th generation head!
+	[delinquent_bankers center]
+	Randums: Please take all our rocket scientism money as a token of appreciation, 5th generation head!
+	[Utz center]
+	All: Jo! Jo! Jo! Jo! Jo! Jo!
+	[BG School, Jo center]
+	Jo: So that's how it would pretty much go down, more or less. What do you think?
+	[David center]
+	David: ...
+	[Woz center]
+	Woz: ...
+	[David center]
+	David: He's an idiot, right?
+	[Woz center]
+	Woz: He's an idiot.
+	[BG CONTINUE]
+	???: TO BE CONTINUED!
+	[You center]
+	???: BOSO-THANKS A BOSO-LOT FOR BOSO-PLAYING!!
+	???: BOSO!
