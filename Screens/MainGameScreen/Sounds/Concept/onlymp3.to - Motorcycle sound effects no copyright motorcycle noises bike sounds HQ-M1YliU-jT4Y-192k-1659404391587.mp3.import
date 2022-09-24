@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/onlymp3.to - Motorcycle sound effects no copyright motorcycle noises bike sounds HQ-M1YliU-jT4Y-192k-1659404391587.mp3-7038531ada93fb9b3699c8db88676c76.mp3str"
+
+[deps]
+
+source_file="res://Screens/MainGameScreen/Sounds/Concept/onlymp3.to - Motorcycle sound effects no copyright motorcycle noises bike sounds HQ-M1YliU-jT4Y-192k-1659404391587.mp3"
+dest_files=[ "res://.import/onlymp3.to - Motorcycle sound effects no copyright motorcycle noises bike sounds HQ-M1YliU-jT4Y-192k-1659404391587.mp3-7038531ada93fb9b3699c8db88676c76.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

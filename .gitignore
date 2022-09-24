@@ -10,10 +10,3 @@ data_*/
 
 #Bosoball ignores
 Export/
-
-Screens/MainGameScreen/Prefabs/
-Screens/MainGameScreen/Scripts/
-Screens/MainGameScreen/Shaders/
-Screens/MainGameScreen/Sounds/
-Screens/MainGameScreen/Textures/
-Screens/MainGameScreen/Cutscenes/

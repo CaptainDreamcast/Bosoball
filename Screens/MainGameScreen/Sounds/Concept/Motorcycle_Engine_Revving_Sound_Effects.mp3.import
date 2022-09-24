@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/Motorcycle_Engine_Revving_Sound_Effects.mp3-aaf9b52cd638c6217a5150e7a19d9a92.mp3str"
+
+[deps]
+
+source_file="res://Screens/MainGameScreen/Sounds/Concept/Motorcycle_Engine_Revving_Sound_Effects.mp3"
+dest_files=[ "res://.import/Motorcycle_Engine_Revving_Sound_Effects.mp3-aaf9b52cd638c6217a5150e7a19d9a92.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

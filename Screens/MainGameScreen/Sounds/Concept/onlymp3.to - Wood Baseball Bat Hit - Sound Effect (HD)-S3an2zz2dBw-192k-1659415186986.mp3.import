@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/onlymp3.to - Wood Baseball Bat Hit - Sound Effect (HD)-S3an2zz2dBw-192k-1659415186986.mp3-0722448475972b2d018aa0a1d596d87d.mp3str"
+
+[deps]
+
+source_file="res://Screens/MainGameScreen/Sounds/Concept/onlymp3.to - Wood Baseball Bat Hit - Sound Effect (HD)-S3an2zz2dBw-192k-1659415186986.mp3"
+dest_files=[ "res://.import/onlymp3.to - Wood Baseball Bat Hit - Sound Effect (HD)-S3an2zz2dBw-192k-1659415186986.mp3-0722448475972b2d018aa0a1d596d87d.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

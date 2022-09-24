@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/onlymp3.to - Baseball Bat Swing Sound Effect-euLI2q8_gcY-192k-1659414473277.mp3-99741b2a5ed1830d99f6e7559414f459.mp3str"
+
+[deps]
+
+source_file="res://Screens/MainGameScreen/Sounds/Concept/onlymp3.to - Baseball Bat Swing Sound Effect-euLI2q8_gcY-192k-1659414473277.mp3"
+dest_files=[ "res://.import/onlymp3.to - Baseball Bat Swing Sound Effect-euLI2q8_gcY-192k-1659414473277.mp3-99741b2a5ed1830d99f6e7559414f459.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

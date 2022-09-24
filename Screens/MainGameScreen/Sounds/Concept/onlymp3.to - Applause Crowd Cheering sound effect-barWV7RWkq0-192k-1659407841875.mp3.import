@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/onlymp3.to - Applause Crowd Cheering sound effect-barWV7RWkq0-192k-1659407841875.mp3-36ef7a54fab21c13f9b487b608b347bf.mp3str"
+
+[deps]
+
+source_file="res://Screens/MainGameScreen/Sounds/Concept/onlymp3.to - Applause Crowd Cheering sound effect-barWV7RWkq0-192k-1659407841875.mp3"
+dest_files=[ "res://.import/onlymp3.to - Applause Crowd Cheering sound effect-barWV7RWkq0-192k-1659407841875.mp3-36ef7a54fab21c13f9b487b608b347bf.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0
